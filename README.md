@@ -1,6 +1,6 @@
 # Flask Task Manager 📝
 
-A simple task management web application built with Flask and SQLAlchemy. This app demonstrates basic **CRUD** (Create, Read, Update, Delete) functionality using a SQLite database.
+A simple task management web application built with Flask and SQLAlchemy. This app demonstrates basic **CRUD** (Create, Read, Update, Delete) functionality using a MySQL database.
 
 ## Features
 
@@ -29,7 +29,7 @@ flask_crud_app/
 MADUEKE ONYINYECHUKWU WINIFRED
 BHU/24/04/09/0044
 CSC104 ASSIGNMENt
-MADUEKE ONYINYECHUKWU BHU/24/04/09/0044 Contributed in the update,create,delete and read statements,the app.py and the sql database
+MADUEKE ONYINYECHUKWU BHU/24/04/09/0044 Contributed in the update,create,delete and read operations,the app.py and the sql database
 ONWUBUARIRI ADAORA BHU/24/04/05/0021 Contributed in the query statements (task_queries.sql) and also the ui design (styles.css) 
 JOSHUA MAIKEINTI BHU/24/09/01/0008
 ANTHONY SAMSON BHU/24/04/10/0027
