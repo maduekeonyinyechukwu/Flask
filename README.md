@@ -14,7 +14,7 @@ A simple task management web application built with Flask and SQLAlchemy. This a
 - Python 3.12
 - Flask
 - Flask SQLAlchemy
-- SQLite
+- MySQL
 - HTML (Jinja2 templates)
 
 flask_crud_app/
