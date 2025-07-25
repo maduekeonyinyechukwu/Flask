@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head><title>Task Manager</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
 <body>
-    <h1>All Tasks</h1>
-    <a href="/create">Add New Task</a>
-    <ul>
-        {% for task in tasks %}
-            <li>
-                <strong>{{ task.title }}</strong> - {{ task.description }} [{{ task.status }}]
-                <a href="{{ url_for('update', id=task.id) }}">Edit</a>
-                <a href="{{ url_for('delete', id=task.id) }}">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <h1>My Tasks</h1>
+
+        <a href="{{ url_for('create') }}">
+            <button>Create New Task</button>
+        </a>
+
+        {% if tasks %}
+            <ul>
+                {% for task in tasks %}
+                    <li class="task">
+                        <strong>{{ task.title }}</strong><br>
+                        {{ task.description }}<br>
+                        <span class="status-{{ task.status|lower }}">{{ task.status }}</span><br><br>
+                        <a href="{{ url_for('update', id=task.id) }}"><button>Update</button></a>
+                        <a href="{{ url_for('delete', id=task.id) }}"><button>Delete</button></a>
+                    </li>
+                    <hr>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No tasks available.</p>
+        {% endif %}
+    </div>
 </body>
 </html>
+
